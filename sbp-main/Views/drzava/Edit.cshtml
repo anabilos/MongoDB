@@ -1,0 +1,11 @@
+@model Galerija.Models.Drzava
+
+<form asp-action="Edit">
+    <fieldset class="idea-form">
+        @Html.HiddenFor(m=>m.Id)
+        @Html.LabelFor(m => m.naziv)
+        @Html.TextAreaFor(m => m.naziv)
+        @Html.TextAreaFor(m => m.mjesta)
+        <input type="submit" name="Update" />
+    </fieldset>
+</form>

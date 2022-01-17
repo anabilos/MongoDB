@@ -1,0 +1,27 @@
+@model IEnumerable<Galerija.Models.Drzava>
+
+<h1>List of Ideas</h1>
+
+    @foreach (var sub in Model)
+    {
+        <div class="idea">
+            <table class="table table-striped">
+        <tr>
+
+            <td>
+                 @sub.Id
+            </td>
+             <td>
+                 @sub.naziv
+            </td>
+            <td>
+                 @sub.mjesta
+            </td>
+                <a asp-action="Edit" asp-route-id="@sub.Id">edit</a>
+                <a asp-action="Delete" asp-route-id="@sub.Id">delete</a>
+            </tr>
+        </table>
+        </div>   
+    }
+<hr/>
+<a class="create" asp-action="Create">Add New Idea</a>
